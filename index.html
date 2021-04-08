@@ -12,44 +12,49 @@
 <body>
     <h1>Personal Expense Tracker</h1>
     <h3>Fill in the data below then click 'Submit' to add to your list</h3>
-    <div id="form-container">
+    <div id="formContainer">
         <form action="">
             <span>
                 <label for="currency">Method of payment:</label>
                 <select name="currency" id="currency" class="form">
-                    <option value="cash">Cash</option>
-                    <option value="card">Credit Card</option>
-                    <option value="check">Check</option>
-                    <option value="crypto">Crypto</option>
-                    <option value="other">Other</option>
+                    <option value="Cash">Cash</option>
+                    <option value="Card">Credit Card</option>
+                    <option value="Check">Check</option>
+                    <option value="Crypto">Crypto</option>
+                    <option value="Other">Other</option>
                 </select>
             </span>
             <span>
                 <label for="description">Description:</label>
-                <input type="text" name="description" id="description" placeholder="Describe the expense">
+                <input type="text" name="description" id="description" placeholder="Description of expense" required>
             </span>
             <span>
                 <label for="date">Date:</label>
-                <input type="date" name="date" id="date">
+                <input type="date" name="date" id="date" required>
             </span>
             <span>
                 <label for="cost">Total Amount:</label>
-                <input type="number" name="cost">
+                <input type="number" name="cost" id="cost" required>
             </span>
             <div>
-                <button type="submit">Add to list</button>
+                <button type="submit" id="submitButton">Add to list</button>
             </div>
         </form>
     </div>
     <div>
         <h2>Expense List</h2>
-        <table id="expense-list">
-            <tr>
-                <th id="method">Method</th>
-                <th id="expense-description">Expense Description</th>
-                <th id="expense-date">Date of Expense</th>
-                <th id="amount">Total Amount</th>
-            </tr>
+        <table id="expenseList">
+            <thead>
+                <tr>
+                    <th id="method">Method</th>
+                    <th id="expenseDescription">Expense Description</th>
+                    <th id="expenseDate">Date of Expense</th>
+                    <th id="amount">Total Amount</th>
+                    <th id="delete">Delete</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+
         </table>
     </div>
     <script type="text/javascript" src="app.js"></script>

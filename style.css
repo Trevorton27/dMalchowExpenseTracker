@@ -1,8 +1,27 @@
-
-#method {
-    width: 125px;
+body {
+    text-align: center;
+}
+#expenseList {
+    margin-left: auto;
+    margin-right: auto;
 }
 
-#expense-description {
+#method {
+    width: 100px;
+}
+
+#expenseDescription {
+    width: 250px;
+}
+
+#expenseDate {
+    width: 200px;
+}
+
+#amount {
+    width: 150px;
+}
+
+#delete {
     width: 150px;
 }
