@@ -1,6 +1,5 @@
 document.getElementById("submitButton").addEventListener("click", append);
 const tbodyElement = document.querySelector("tbody");
-const formElement = document.querySelector("form");
 
 function append(e) {
     e.preventDefault();
@@ -19,7 +18,7 @@ function append(e) {
     </tr>`;
 
     tbodyElement.innerHTML += newRow;
-    payment.value = '';
+    payment.value = 'NONE';
     info.value = '';
     date.value = '';
     amount.value = '';
