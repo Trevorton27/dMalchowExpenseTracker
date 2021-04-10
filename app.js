@@ -5,20 +5,24 @@ const formElement = document.querySelector("form");
 function append(e) {
     e.preventDefault();
 
-    const payment = document.getElementById("currency").value;
-    const info = document.getElementById("description").value;
-    const date = document.getElementById("date").value;
-    const amount = document.getElementById("cost").value;
+    const payment = document.getElementById("currency");
+    const info = document.getElementById("description");
+    const date = document.getElementById("date");
+    const amount = document.getElementById("cost");
     const newRow = `
     <tr>
-        <td>${payment}</td>
-        <td>${info}</td>
-        <td>${date}</td>
-        <td>${amount}</td>
+        <td>${payment.value}</td>
+        <td>${info.value}</td>
+        <td>${date.value}</td>
+        <td>${amount.value}</td>
         <td><button class="deleteBtn">Delete</button></td>
     </tr>`;
 
     tbodyElement.innerHTML += newRow;
+    payment.value = '';
+    info.value = '';
+    date.value = '';
+    amount.value = '';
 };
 
 function deleteRow(e) {

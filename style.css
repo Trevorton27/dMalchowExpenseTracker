@@ -6,6 +6,13 @@ body {
     margin-right: auto;
 }
 
+th {
+    border: 2px solid black;
+}
+td {
+    border: 2px solid black;
+}
+
 #method {
     width: 100px;
 }
@@ -24,4 +31,10 @@ body {
 
 #delete {
     width: 150px;
+}
+
+.deleteBtn {
+    border-radius: 20px;
+    background-color: rgb(236, 92, 92);
+    color: white;
 }
