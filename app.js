@@ -1,4 +1,4 @@
-document.getElementById("submitButton").addEventListener("click", append);
+document.getElementById("expense-form").addEventListener("submit", append);
 const tbodyElement = document.querySelector("tbody");
 
 function append(e) {
