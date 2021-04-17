@@ -11,7 +11,7 @@
 
 <body>
     <h1>Personal Expense Tracker</h1>
-    <h3>Input your data into the fields then click the button 'Add to list'</h3>
+    <h3>Input your data into the fields then click the 'Submit' button.</h3>
     <div id="formContainer">
         <form id="expense-form">
             <span>
@@ -26,6 +26,10 @@
                 </select>
             </span>
             <span>
+                <label for="cost">Total Amount: </label>
+                <input type="number" name="cost" id="cost" class="inputs" required />
+            </span>
+            <span>
                 <label for="description">Description: </label>
                 <input type="text" name="description" id="description" placeholder="Description of expense"
                     class="inputs" required />
@@ -34,9 +38,11 @@
                 <label for="date">Date: </label>
                 <input type="date" name="date" id="date" class="inputs" required />
             </span>
+         
             <span>
-                <label for="cost">Total Amount: </label>
-                <input type="number" name="cost" id="cost" class="inputs" required />
+                <label for="location">Location: </label>
+                <input type="text" name="location" id="location" placeholder="location of expense"
+                    class="inputs" required />
             </span>
             <p>
                 <input type="submit" id="submitButton" />
@@ -49,13 +55,14 @@
             <thead>
                 <tr>
                     <th id="method">Method</th>
+                    <th id="amount">Total Amount</th>
                     <th id="expenseDescription">Expense Description</th>
                     <th id="expenseDate">Date of Expense</th>
-                    <th id="amount">Total Amount</th>
+                    <th id="location">Location</th>
                     <th id="delete">Delete</th>
                 </tr>
             </thead>
-            <tbody></tbody>
+            <tbody id="tableBody"></tbody>
 
         </table>
     </div>
